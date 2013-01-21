@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'cs132_program_0_smucha' target in the 'cs132_program_0_smucha' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
