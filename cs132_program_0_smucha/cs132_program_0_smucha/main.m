@@ -44,7 +44,6 @@ int main(void)
         
         [word insertString: [words objectAtIndex:1] atIndex:0];
         NSLog(@"word, Post-reformat: %@", word);
-       
     }
     return EXIT_SUCCESS;
 }
