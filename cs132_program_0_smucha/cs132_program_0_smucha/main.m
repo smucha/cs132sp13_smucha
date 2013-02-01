@@ -15,7 +15,6 @@ int main(void)
     
     @autoreleasepool {
         
-        
         NSMutableArray* words = nil;
         words = [[NSMutableArray alloc] init];
         
@@ -35,6 +34,17 @@ int main(void)
         [words sortUsingSelector: @selector(localizedCaseInsensitiveCompare:)];
         NSLog(@"words, sorted using localizedCaseInsensitiveCompare: %@", words);
         
+        NSMutableString* word = nil;
+        NSLog(@"word, Uinitialized: (null)");
+        word = [[NSMutableString alloc] initWithString:[words objectAtIndex:0]];
+        NSLog(@"word, Initialized: %@", word);
+        
+        [word appendString:[words objectAtIndex:2]];
+        NSLog(@"word, Post-append: %@", word);
+        
+        [word insertString: [words objectAtIndex:1] atIndex:0];
+        NSLog(@"word, Post-reformat: %@", word);
+       
     }
     return EXIT_SUCCESS;
 }
