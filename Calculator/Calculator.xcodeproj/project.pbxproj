@@ -22,7 +22,6 @@
 		E9A6EACD16BC04B20078E36D /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A6EACB16BC04B20078E36D /* OCMockito.framework */; };
 		E9A6EACF16BC04C00078E36D /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9A6EACA16BC04B20078E36D /* OCHamcrest.framework */; };
 		E9A6EAD016BC04C00078E36D /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9A6EACB16BC04B20078E36D /* OCMockito.framework */; };
-		E9A6EAD116BC05480078E36D /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A6EAC816BC04560078E36D /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A6EAC516BC043B0078E36D /* CalculatorTest.m in Sources */,
-				E9A6EAD116BC05480078E36D /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
