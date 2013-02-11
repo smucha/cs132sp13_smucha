@@ -16,9 +16,11 @@
 
 -(void)pressKey:(char)theKey
 {
-    NSLog(@"STUB response to '%@' message received by object at %p (%@)",
-    NSStringFromSelector(_cmd), self, self);
-     return;
+    int old;
+	old = [self numberOnScreen];
+	int newDigit;
+	newDigit = theKey - '0';
+	[self setNumberOnScreen: 10 * old + newDigit];
 }
 
 -(NSString*) description
