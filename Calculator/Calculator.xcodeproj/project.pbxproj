@@ -165,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A6EAC316BC043B0078E36D /* CalculatorTest.m */,
+				E9A6EAAE16BC03970078E36D /* CalculatorTests-Info.plist */,
 				E9A6EAAD16BC03970078E36D /* Supporting Files */,
 			);
 			path = CalculatorTests;
@@ -173,7 +174,6 @@
 		E9A6EAAD16BC03970078E36D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9A6EAAE16BC03970078E36D /* CalculatorTests-Info.plist */,
 				E9A6EAAF16BC03970078E36D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -506,6 +506,7 @@
 				E9A6EAB916BC03970078E36D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9A6EABA16BC03970078E36D /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +515,7 @@
 				E9A6EABC16BC03970078E36D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
