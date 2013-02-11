@@ -13,7 +13,7 @@ void CLItest(void);
 
 int main(int argc, char *argv[])
 {
-    CLItest(); //Comment out this line to see a GUI version ;)
+    //CLItest(); //Comment out this line to see a GUI version ;)
     return NSApplicationMain(argc, (const char **)argv);
 }
 
