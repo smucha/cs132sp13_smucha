@@ -28,10 +28,6 @@
  */
 @interface CalculatorTest : SenTestCase
 
-@property (assign) int numberAccumulated;
-
-@property (assign) char operationPending;
-
 @end
 
 @implementation CalculatorTest

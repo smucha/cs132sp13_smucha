@@ -4,6 +4,10 @@
 
 @synthesize numberOnScreen;
 
+@synthesize numberAccumulated;
+
+@synthesize operationPending;
+
 - (id)init
 {
     self = [super init];
@@ -16,7 +20,7 @@
 
 -(void)pressKey:(char)theKey
 {
-    if('0' <= theKey <= '9')
+    if(isAdigit(theKey))
     {
         int old;
         old = [self numberOnScreen];
@@ -24,7 +28,7 @@
         newDigit = theKey - '0';
         [self setNumberOnScreen: 10 * old + newDigit];
     } else {
-        if( theKey == 'C')
+        if( theKey == 'C' || theKey == 'c')
         {
             numberOnScreen = '0';
         } else {
@@ -38,4 +42,12 @@
 {
     return [NSString stringWithFormat:@"Calculator with %d on screen.", [self numberOnScreen]];
 }
+
 @end
+
+BOOL isAdigit(char pressKey)
+{
+    if(pressKey > '9') return NO;
+    if(pressKey < '0') return NO;
+    return YES;
+}
