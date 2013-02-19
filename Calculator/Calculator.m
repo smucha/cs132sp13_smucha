@@ -28,9 +28,9 @@
         newDigit = theKey - '0';
         [self setNumberOnScreen: 10 * old + newDigit];
     } else {
-        if( theKey == 'C' || theKey == 'c')
+        if(isClearScreenKey(theKey))
         {
-            numberOnScreen = '0';
+            numberOnScreen = 0;
         } else {
             NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
         }
@@ -50,4 +50,11 @@ BOOL isAdigit(char pressKey)
     if(pressKey > '9') return NO;
     if(pressKey < '0') return NO;
     return YES;
+}
+
+BOOL isClearScreenKey(char pressKey)
+{
+    if(pressKey == 'C') return YES;
+    if(pressKey == 'c') return YES;
+    return NO;
 }

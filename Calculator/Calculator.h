@@ -13,3 +13,5 @@
 @end
 
 BOOL isAdigit(char pressKey);
+
+BOOL isClearScreenKey(char pressKey);
