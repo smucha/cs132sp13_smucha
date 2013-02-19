@@ -2,11 +2,11 @@
 
 @implementation Calculator
 
-@synthesize numberOnScreen;
+@synthesize numberOnScreen = _DNU_numberOnScreen;
 
-@synthesize numberAccumulated;
+@synthesize numberAccumulated = _DNU_numberAccumulated;
 
-@synthesize operationPending;
+@synthesize operationPending = _DNU_operationPending;
 
 - (id)init
 {
@@ -14,6 +14,10 @@
     if (self)
     {
         //Set up initial calculator conditions here
+        
+        _DNU_numberOnScreen = 0;
+        _DNU_numberAccumulated = 0;
+        _DNU_operationPending = '+';
     }
     return self;
 }
