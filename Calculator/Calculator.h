@@ -12,6 +12,8 @@
 
 -(void)appendDigit:(char) theKey;
 
+-(void)clearScreen:(char) theKey;
+
 @end
 
 BOOL isAdigit(char pressKey);

@@ -26,7 +26,7 @@
     } else {
         if(isClearScreenKey(theKey))
         {
-            numberOnScreen = 0;
+            [self clearScreen:theKey];
         } else {
             NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
         }
@@ -47,6 +47,12 @@
     newDigit = theKey - '0';
     [self setNumberOnScreen: 10 * old + newDigit];
 }
+
+-(void)clearScreen:(char) theKey
+{
+    numberOnScreen = 0;
+}
+
 @end
 
 BOOL isAdigit(char pressKey)
