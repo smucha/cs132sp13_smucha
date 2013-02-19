@@ -10,6 +10,8 @@
 
 -(void) pressKey:(char) theKey;
 
+-(void)appendDigit:(char) theKey;
+
 @end
 
 BOOL isAdigit(char pressKey);

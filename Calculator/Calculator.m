@@ -22,11 +22,7 @@
 {
     if(isAdigit(theKey))
     {
-        int old;
-        old = [self numberOnScreen];
-        int newDigit;
-        newDigit = theKey - '0';
-        [self setNumberOnScreen: 10 * old + newDigit];
+        [self appendDigit:theKey];
     } else {
         if(isClearScreenKey(theKey))
         {
@@ -43,6 +39,14 @@
     return [NSString stringWithFormat:@"Calculator with %d on screen.", [self numberOnScreen]];
 }
 
+-(void)appendDigit:(char) theKey
+{
+    int old;
+    old = [self numberOnScreen];
+    int newDigit;
+    newDigit = theKey - '0';
+    [self setNumberOnScreen: 10 * old + newDigit];
+}
 @end
 
 BOOL isAdigit(char pressKey)
