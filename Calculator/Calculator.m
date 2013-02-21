@@ -66,28 +66,29 @@
     char operator;
 	int lhs;
 	int rhs;
-	int result;
+	int result = 0;
 	rhs = [self numberOnScreen];
 	lhs = [self numberAccumulated];
 	operator = [self operationPending];
-	result = switch(operator)
+    switch(operator)
 	{
-		case: '+':
+		case '+':
 		    result = lhs+rhs;
 		    break;
-		case: '-':
+		case '-':
             result = lhs-rhs;
             break;
-		case: '*':
+		case '*':
             result = lhs*rhs;
             break;
-        case: '/':
+        case '/':
             result = lhs/rhs;
             break;
-        case: '%':
+        case '%':
             result = lhs%rhs;
             break;
 		default:
+            break;
 	}
 	[self setNumberOnScreen:result];
     [self clearAccumulator:0];
