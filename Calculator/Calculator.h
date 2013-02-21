@@ -18,6 +18,10 @@
 
 -(void) computeAndDisplayResult;
 
+-(void) clearAccumulator:(char) theKey;
+
+-(void) clearOperation:(char) theKey;
+
 @end
 
 BOOL isAdigit(char pressKey);

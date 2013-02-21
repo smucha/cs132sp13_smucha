@@ -97,6 +97,15 @@
     [self setOperationPending:'?'];
 }
 
+-(void) clearAccumulator:(char) theKey
+{
+    numberAccumulated = 0;
+}
+
+-(void) clearOperation:(char) theKey
+{
+    operationPending = '?';
+}
 
 @end
 
