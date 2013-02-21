@@ -64,6 +64,40 @@
     [self setOperationPending:theOperator];
 }
 
+-(void) computeAndDisplayResult
+{
+    char operator;
+	int lhs;
+	int rhs;
+	int result;
+	rhs = [self numberOnScreen];
+	lhs = [self numberAccumulated];
+	operator = [self operationPending];
+	result = switch(operatior)
+	{
+		case: '+':
+		    result = lhs+rhs;
+		    break;
+		case: '-':
+            result = lhs-rhs;
+            break;
+		case: '*':
+            result = lhs*rhs;
+            break;
+        case: '/':
+            result = lhs/rhs;
+            break;
+        case: '%':
+            result = lhs%rhs;
+            break;
+		default:
+	}
+	[self setNumberOnScreen:result];
+    [self setNumberAccumulated:0];
+    [self setOperationPending:'?'];
+}
+
+
 @end
 
 BOOL isAdigit(char pressKey)

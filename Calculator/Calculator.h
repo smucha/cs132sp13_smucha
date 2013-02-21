@@ -16,6 +16,8 @@
 
 -(void) registerArithmetic:(char)theOperator;
 
+-(void) computeAndDisplayResult;
+
 @end
 
 BOOL isAdigit(char pressKey);
