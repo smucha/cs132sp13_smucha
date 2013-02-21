@@ -85,3 +85,13 @@ BOOL isResultKey(char pressKey)
     if(pressKey == '=') return YES;
     return NO;
 }
+
+BOOL isArithmeticAllKey(char pressKey)
+{
+    if(pressKey == '+') return YES;
+    if(pressKey == '-') return YES;
+    if(pressKey == '*') return YES;
+    if(pressKey == '/') return YES;
+    if(pressKey == '%') return YES;
+    return NO;
+}

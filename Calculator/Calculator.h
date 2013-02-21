@@ -23,3 +23,5 @@ BOOL isClearScreenKey(char pressKey);
 BOOL isClearAllKey(char pressKey);
 
 BOOL isResultKey(char pressKey);
+
+BOOL isArithmeticAllKey(char pressKey);
