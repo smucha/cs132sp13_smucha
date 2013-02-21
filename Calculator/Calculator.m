@@ -72,3 +72,10 @@ BOOL isClearScreenKey(char pressKey)
     if(pressKey == 'c') return YES;
     return NO;
 }
+
+BOOL isClearAllKey(char pressKey)
+{
+    if(pressKey == 'A') return YES;
+    if(pressKey == 'a') return YES;
+    return NO;
+}

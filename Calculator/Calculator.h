@@ -19,3 +19,5 @@
 BOOL isAdigit(char pressKey);
 
 BOOL isClearScreenKey(char pressKey);
+
+BOOL isClearAllKey(char pressKey);
