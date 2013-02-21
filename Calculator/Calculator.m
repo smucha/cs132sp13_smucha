@@ -73,7 +73,7 @@
 	rhs = [self numberOnScreen];
 	lhs = [self numberAccumulated];
 	operator = [self operationPending];
-	result = switch(operatior)
+	result = switch(operator)
 	{
 		case: '+':
 		    result = lhs+rhs;
@@ -93,8 +93,8 @@
 		default:
 	}
 	[self setNumberOnScreen:result];
-    [self setNumberAccumulated:0];
-    [self setOperationPending:'?'];
+    [self clearAccumulator:0];
+    [self clearOperation:0];
 }
 
 -(void) clearAccumulator:(char) theKey
