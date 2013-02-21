@@ -33,6 +33,19 @@
         }
     
     }
+    if(isResultKey(theKey))
+    {
+        [self computeAndDisplayResult];
+    }
+    if(isArithmeticAllKey(theKey))
+    {
+        [self registerArithmetic:theKey];
+    }
+    if(isClearAllKey(theKey))
+    {
+        [self computeAndDisplayResult];
+        [self clearScreen:theKey];
+    }
 }
 
 -(NSString*) description
