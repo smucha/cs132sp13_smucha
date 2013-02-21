@@ -2,11 +2,11 @@
 
 @implementation Calculator
 
-@synthesize numberOnScreen = _DNU_numberOnScreen;
+@synthesize numberOnScreen;
 
-@synthesize numberAccumulated = _DNU_numberAccumulated;
+@synthesize numberAccumulated;
 
-@synthesize operationPending = _DNU_operationPending;
+@synthesize operationPending;
 
 - (id)init
 {
@@ -15,9 +15,6 @@
     {
         //Set up initial calculator conditions here
         
-        _DNU_numberOnScreen = 0;
-        _DNU_numberAccumulated = 0;
-        _DNU_operationPending = '+';
     }
     return self;
 }
@@ -54,7 +51,7 @@
 
 -(void)clearScreen:(char) theKey
 {
-    numberOnScreen = 0;
+   numberOnScreen = 0;
 }
 
 -(void) registerArithmetic:(char)theOperator
