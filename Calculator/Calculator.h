@@ -14,6 +14,8 @@
 
 -(void)clearScreen:(char) theKey;
 
+-(void) registerArithmetic:(char)theOperator;
+
 @end
 
 BOOL isAdigit(char pressKey);

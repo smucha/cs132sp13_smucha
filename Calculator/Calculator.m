@@ -57,6 +57,13 @@
     numberOnScreen = 0;
 }
 
+-(void) registerArithmetic:(char)theOperator
+{
+    [self setNumberAccumulated:[self numberOnScreen]];
+    [self clearScreen:0];
+    [self setOperationPending:theOperator];
+}
+
 @end
 
 BOOL isAdigit(char pressKey)
