@@ -79,3 +79,9 @@ BOOL isClearAllKey(char pressKey)
     if(pressKey == 'a') return YES;
     return NO;
 }
+
+BOOL isResultKey(char pressKey)
+{
+    if(pressKey == '=') return YES;
+    return NO;
+}
