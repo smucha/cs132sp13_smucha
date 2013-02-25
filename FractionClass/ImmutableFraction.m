@@ -10,4 +10,8 @@
 
 @implementation ImmutableFraction
 
+@synthesize numerator;
+
+@synthesize denominator;
+
 @end
