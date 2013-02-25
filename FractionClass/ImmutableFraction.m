@@ -14,6 +14,14 @@
 
 @synthesize denominator;
 
+- (id)init
+{
+    printf("init method run");
+}
 
+- (id)description
+{
+    printf("description method run");
+}
 
 @end
