@@ -14,4 +14,10 @@
 
 @property (readonly,assign) int denominator;
 
+-(void)initWithNumerator:(int) andDenominator:(int) d ;
+
+-(void)initWithFraction: (fraction*) f ;
+
+
 @end
+
