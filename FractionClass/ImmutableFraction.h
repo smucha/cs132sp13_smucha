@@ -16,10 +16,13 @@
 
 - (void)initWithNumerator:(int) andDenominator:(int) d ;
 
-- (void)initWithFraction: (fraction*) f ;
+- (void)initWithFraction: (Fraction*) f ;
 
 - (float)floatValue;
 
+- (Fraction*)negative;
+
+- (Fraction*)reciprocal;
 
 @end
 
