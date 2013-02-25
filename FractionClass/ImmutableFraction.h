@@ -16,13 +16,25 @@
 
 - (void)initWithNumerator:(int) andDenominator:(int) d ;
 
-- (void)initWithFraction: (Fraction*) f ;
+- (void)initWithFraction:(Fraction*) f ;
 
 - (float)floatValue;
 
 - (Fraction*)negative;
 
 - (Fraction*)reciprocal;
+
+- (Fraction*)sumWith:(Fraction*) sum;
+
+- (Fraction*)subtractFrom:(Fraction*) subtract;
+
+- (Fraction*)minus:(Fraction*) m;
+
+- (Fraction*)multiplyBy:(Fraction*) multiply;
+
+- (Fraction*)divideBy:(Fraction*) divide;
+
+- (Fraction*)divideInto:(Fraction*) into;
 
 @end
 
