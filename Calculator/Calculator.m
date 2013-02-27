@@ -69,6 +69,7 @@
 
 -(void) registerArithmetic:(char)theOperator
 {
+    [self computeAndDisplayResult];
     [self setNumberAccumulated:[self numberOnScreen]];
     [self clearScreen:0];
     [self setOperationPending:theOperator];
@@ -101,6 +102,7 @@
             result = lhs%rhs;
             break;
 		default:
+            result = rhs;
             break;
 	}
 	[self setNumberOnScreen:result];
