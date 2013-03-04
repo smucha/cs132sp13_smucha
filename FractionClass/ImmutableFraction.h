@@ -36,6 +36,8 @@
 
 - (Fraction*)divideInto:(Fraction*) into;
 
+- (Fraction*)reduced:(Fraction*) commonDenominator;
+
 @end
 
 int GCD(int x, int y);
