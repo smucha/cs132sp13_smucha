@@ -80,8 +80,7 @@
 
 - (Fraction*)divideInto:(Fraction*) into
 {
-    printf("divide into method ran");
-    return nil;
+    return [thingOnTop multiply:[self reciprocal]];
 }
 
 - (Fraction*)reduced:(Fraction*) commonDenominator
