@@ -8,7 +8,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "Yes"
          filePath = "Calculator.m"
-         timestampString = "383677009.494204"
+         timestampString = "384057351.827095"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "16"
@@ -19,7 +19,7 @@
             <BreakpointActionProxy
                ActionType = "Xcode.BreakpointAction.DebuggerCommand">
                <ActionContent
-                  consoleCommand = "po &quot;\t\t\t%s\t%s\t%s\n&quot;, LHS, Op, RHS">
+                  consoleCommand = "po [[NSString alloc] initWithFormat:@&quot;\t\t\t%s\t%s\t%s\n&quot;, &quot;LHS&quot;, &quot;OP&quot;, &quot;RHS&quot;]">
                </ActionContent>
             </BreakpointActionProxy>
          </Actions>
@@ -29,18 +29,18 @@
          ignoreCount = "0"
          continueAfterRunningActions = "Yes"
          filePath = "Calculator.m"
-         timestampString = "384055530.803543"
+         timestampString = "384058471.213256"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "23"
-         endingLineNumber = "23"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
          landmarkName = "-pressKey:"
          landmarkType = "5">
          <Actions>
             <BreakpointActionProxy
                ActionType = "Xcode.BreakpointAction.DebuggerCommand">
                <ActionContent
-                  consoleCommand = "po [[NSString alloc] initWithFormat:@&quot;Key: %c&quot;, theKey]">
+                  consoleCommand = " po [[NSString alloc] initWithFormat:@&quot;Key: %c&quot;, theKey]">
                </ActionContent>
             </BreakpointActionProxy>
          </Actions>
@@ -50,21 +50,35 @@
          ignoreCount = "0"
          continueAfterRunningActions = "Yes"
          filePath = "Calculator.m"
-         timestampString = "384055698.988976"
+         timestampString = "384058471.213256"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "49"
-         endingLineNumber = "49"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "-pressKey:"
          landmarkType = "5">
          <Actions>
             <BreakpointActionProxy
                ActionType = "Xcode.BreakpointAction.DebuggerCommand">
                <ActionContent
-                  consoleCommand = "po &quot;\t\t\t%d\t%c\t%d\n&quot;, [self numberAccumulated], [self operationPending], [self numberOnScreen]">
+                  consoleCommand = "po [[NSString alloc] initWithFormat:@&quot;\t\t\t%d\t%c\t%d\n&quot;, [self numberAccumulated], [self operationPending], [self numberOnScreen]]">
                </ActionContent>
             </BreakpointActionProxy>
          </Actions>
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         condition = "old == 0"
+         continueAfterRunningActions = "Yes"
+         filePath = "Calculator.m"
+         timestampString = "384058471.213256"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
+         landmarkName = "-appendDigit:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

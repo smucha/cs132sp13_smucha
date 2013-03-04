@@ -14,7 +14,9 @@
     if (self)
     {
         //Set up initial calculator conditions here
-        
+        [self setNumberAccumulated:0];
+        [self setNumberOnScreen:0];
+        [self setOperationPending:'?'];
     }
     return self;
 }
@@ -64,7 +66,7 @@
 
 -(void)clearScreen:(char) theKey
 {
-   numberOnScreen = 0;
+    [self setNumberOnScreen : 0 ];
 }
 
 -(void) registerArithmetic:(char)theOperator
