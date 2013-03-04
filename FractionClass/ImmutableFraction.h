@@ -38,6 +38,10 @@
 
 - (Fraction*)reduced:(Fraction*) commonDenominator;
 
+- (Fraction*)add:(Fraction*) thingToAdd;
+
+- (Fraction*)multiply:(Fraction*) thingtoMultiply;
+
 @end
 
 int GCD(int x, int y);

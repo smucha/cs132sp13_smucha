@@ -58,8 +58,7 @@
 
 - (Fraction*)subtractFrom:(Fraction*) subtract
 {
-    printf("subtract from method ran");
-    return nil;
+
 }
 
 - (Fraction*)minus:(Fraction*) m
@@ -92,6 +91,20 @@
 	int newDenominator = y/d
 	Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
+	return theAnswer;
+}
+
+(Fraction*)add:(Fraction*) thingToAdd
+{
+    Fraction* theAnswer = nil;
+	int a = [self numerator]; //this is "a"
+	int b = [self denominator]; //this is "b
+	int c = [RHS numerator]; //this is "c"
+	int d = [RHS denominator]; //this is "d'
+	int newNumerator = a*d+b*c; //or whatever formula
+	int newDenominator = d*b; //or whatever formula
+	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                     andDenominator:newDenominator];
 	return theAnswer;
 }
 
