@@ -58,10 +58,10 @@
 
 - (Fraction*)subtractFrom:(Fraction*) subtract
 {
-
+    return [self minus:[subtract negative]];
 }
 
-- (Fraction*)minus:(Fraction*) m
+- (Fraction*)minus:(Fraction*) thingToSubtract
 {
     return [self add:[thingToSubtract negative]];
 }
@@ -72,12 +72,12 @@
     return nil;
 }
 
-- (Fraction*)divideBy:(Fraction*) divide
+- (Fraction*)divideBy:(Fraction*) divisor
 {
     return [self multiply:[divisor reciprocal]];
 }
 
-- (Fraction*)divideInto:(Fraction*) into
+- (Fraction*)divideInto:(Fraction*) thingOnTop
 {
     return [thingOnTop multiply:[self reciprocal]];
 }
