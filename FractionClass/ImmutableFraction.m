@@ -75,8 +75,7 @@
 
 - (Fraction*)divideBy:(Fraction*) divide
 {
-    printf("divide by method ran");
-    return nil;
+    return [self multiply:[divisor reciprocal]];
 }
 
 - (Fraction*)divideInto:(Fraction*) into
