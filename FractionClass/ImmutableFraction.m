@@ -35,12 +35,19 @@
 	int newDenominator = b; //or whatever formula
 	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
                                      andDenominator:newDenominator];
-    return theAnswer;}
+    return theAnswer;
+}
 
 - (Fraction*)reciprocal
 {
-    printf("reciprocal method ran");
-    return nil;
+    Fraction* theAnswer = nil;
+	int a = [self numerator]; //this is "a"
+	int b = [self denominator]; //this is "b"
+	int newNumerator = b; //or whatever formula
+	int newDenominator = a; //or whatever formula
+	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                     andDenominator:newDenominator];
+    return theAnswer;
 }
 
 - (Fraction*)sumWith:(Fraction*) sum
