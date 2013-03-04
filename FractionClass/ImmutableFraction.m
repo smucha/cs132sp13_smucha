@@ -108,6 +108,20 @@
 	return theAnswer;
 }
 
+- (Fraction*)multiply:(Fraction*) thingtoMultiply
+{
+    Fraction* theAnswer = nil;
+	int a = [self numerator]; //this is "a"
+	int b = [self denominator]; //this is "b
+	int c = [RHS numerator]; //this is "c"
+	int d = [RHS denominator]; //this is "d'
+	int newNumerator = a*c; //or whatever formula
+	int newDenominator = d*b; //or whatever formula
+	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                     andDenominator:newDenominator];
+	return theAnswer;
+}
+
 @end
 
 int GCD(int x, int y)
