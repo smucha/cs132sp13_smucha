@@ -64,8 +64,7 @@
 
 - (Fraction*)minus:(Fraction*) m
 {
-    printf("minus method ran");
-    return nil;
+    return [self add:[thingToSubtract negative]];
 }
 
 - (Fraction*)multiplyBy:(Fraction*) multiply
