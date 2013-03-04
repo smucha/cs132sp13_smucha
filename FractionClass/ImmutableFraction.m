@@ -28,9 +28,14 @@
 
 - (Fraction*)negative
 {
-    printf("negative method ran");
-    return nil;
-}
+    Fraction* theAnswer = nil;
+	int a = [self numerator]; //this is "a"
+	int b = [self denominator]; //this is "b"
+	int newNumerator = -a; //or whatever formula
+	int newDenominator = b; //or whatever formula
+	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+                                     andDenominator:newDenominator];
+    return theAnswer;}
 
 - (Fraction*)reciprocal
 {
