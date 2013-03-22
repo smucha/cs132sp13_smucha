@@ -10,4 +10,43 @@
 
 @interface WCSFraction : NSObject
 
+@property (readonly,assign) int numerator;
+
+@property (readonly,assign) int denominator;
+
+- (void)initWithNumerator:(int)
+           andDenominator:(int) d ;
+
+- (void)initWithFraction:(Fraction*) f ;
+
+- (float)floatValue;
+
+- (Fraction*)negative;
+
+- (Fraction*)reciprocal;
+
+- (Fraction*)sumWith:(Fraction*) sum;
+
+- (Fraction*)subtractFrom:(Fraction*) subtract;
+
+- (Fraction*)minus:(Fraction*) m;
+
+- (Fraction*)multiplyBy:(Fraction*) multiply;
+
+- (Fraction*)divideBy:(Fraction*) divide;
+
+- (Fraction*)divideInto:(Fraction*) into;
+
+- (Fraction*)reduced:(Fraction*) commonDenominator;
+
+- (Fraction*)add:(Fraction*) thingToAdd;
+
+- (Fraction*)multiply:(Fraction*) thingtoMultiply;
+
 @end
+
+int GCD(int x, int y);
+
+
+
+
