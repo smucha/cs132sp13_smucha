@@ -43,9 +43,15 @@
 
 - (Fraction*)multiply:(Fraction*) thingtoMultiply;
 
+-(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction;
+
+- (BOOL)isEqual:(id)other;
+
+-(NSUInteger) hash;
+
 @end
 
-int GCD(int x, int y);
+int gcd(int a, int b);
 
 
 

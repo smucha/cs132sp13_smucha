@@ -124,12 +124,50 @@
 	return theAnswer;
 }
 
+-(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction
+{
+    //Common math trick:
+    //   Do not compare two things directly :   a  vs b
+    //   Do ompare their difference to zero :  a-b vs 0
+    //   It is often easiest to determine whether
+    //    a value is postive, negative, or zero
+    
+    int difference = [[self minus: otherFraction] numerator];
+    
+    if(difference > 0) return NSOrderedDescending; // self > other
+    if(difference < 0) return NSOrderedAscending; // self < other
+    if(difference == 0) return NSOrderedSame; //self == other
+    
+    return NSOrderedSame; //This line should never execute
+    
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (other == self)
+        return YES; //That's ME!
+    if (!other)
+        return NO; //There's no "that" to compare to
+    if(![other isKindOfClass:[WCSFraction class]])
+        return NO; //Meh, it's not a fraction. Apples'n'oranges.
+    
+    return [self compareToFraction:other]==NSOrderedSame; //Comparing Fractions
+}
+
+-(NSUInteger) hash
+{ //This has to do with how these could be stored in sets and dictionaries
+    return MAX([self numerator], [self denominator]);
+} //Wait until CS222 (Data Structures) to ask about this one
+
+
+
 @end
 
-int GCD(int x, int y)
+int gcd(int a, int b)
 {
-    printf("GCD activated");
-    return 0;
+    //Euclidean algorithm. It works!
+    if(b==0) return a;
+    else return gcd(b, a%b);
 }
 
 
