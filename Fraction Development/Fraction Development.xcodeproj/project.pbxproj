@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9318A6E16F9342300D5DA88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318A6D16F9342300D5DA88 /* Cocoa.framework */; };
+		E9318A7816F9342300D5DA88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9318A7616F9342300D5DA88 /* InfoPlist.strings */; };
+		E9318A7A16F9342300D5DA88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9318A7916F9342300D5DA88 /* main.m */; };
+		E9318A7E16F9342300D5DA88 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9318A7C16F9342300D5DA88 /* Credits.rtf */; };
+		E9318A8116F9342300D5DA88 /* WCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9318A8016F9342300D5DA88 /* WCSAppDelegate.m */; };
+		E9318A8416F9342300D5DA88 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9318A8216F9342300D5DA88 /* MainMenu.xib */; };
+		E9318A8C16F9342300D5DA88 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318A8B16F9342300D5DA88 /* SenTestingKit.framework */; };
+		E9318A8D16F9342300D5DA88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318A6D16F9342300D5DA88 /* Cocoa.framework */; };
+		E9318A9516F9342300D5DA88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9318A9316F9342300D5DA88 /* InfoPlist.strings */; };
+		E9318AA316F93DF100D5DA88 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318AA116F93DF100D5DA88 /* OCHamcrest.framework */; };
+		E9318AA416F93DF200D5DA88 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318AA216F93DF100D5DA88 /* OCMockito.framework */; };
+		E9318AA616F93DFE00D5DA88 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9318AA116F93DF100D5DA88 /* OCHamcrest.framework */; };
+		E9318AA716F93DFE00D5DA88 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E9318AA216F93DF100D5DA88 /* OCMockito.framework */; };
+		E9318AAA16F93E2A00D5DA88 /* TestFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = E9318AA816F93E2A00D5DA88 /* TestFraction.m */; };
+		E9318AAE16F93E3400D5DA88 /* TestMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = E9318AAC16F93E3400D5DA88 /* TestMutableFraction.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9318A8E16F9342300D5DA88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9318A6216F9342300D5DA88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9318A6916F9342300D5DA88;
+			remoteInfo = "Fraction Development";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E9318AA516F93DF800D5DA88 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				E9318AA616F93DFE00D5DA88 /* OCHamcrest.framework in CopyFiles */,
+				E9318AA716F93DFE00D5DA88 /* OCMockito.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E9318A6A16F9342300D5DA88 /* Fraction Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fraction Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9318A6D16F9342300D5DA88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E9318A7016F9342300D5DA88 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E9318A7116F9342300D5DA88 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E9318A7216F9342300D5DA88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E9318A7516F9342300D5DA88 /* Fraction Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fraction Development-Info.plist"; sourceTree = "<group>"; };
+		E9318A7716F9342300D5DA88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9318A7916F9342300D5DA88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9318A7B16F9342300D5DA88 /* Fraction Development-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fraction Development-Prefix.pch"; sourceTree = "<group>"; };
+		E9318A7D16F9342300D5DA88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E9318A7F16F9342300D5DA88 /* WCSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSAppDelegate.h; sourceTree = "<group>"; };
+		E9318A8016F9342300D5DA88 /* WCSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSAppDelegate.m; sourceTree = "<group>"; };
+		E9318A8316F9342300D5DA88 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E9318A8A16F9342300D5DA88 /* Fraction DevelopmentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fraction DevelopmentTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9318A8B16F9342300D5DA88 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E9318A9216F9342300D5DA88 /* Fraction DevelopmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fraction DevelopmentTests-Info.plist"; sourceTree = "<group>"; };
+		E9318A9416F9342300D5DA88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9318AA116F93DF100D5DA88 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrest.framework; sourceTree = "<group>"; };
+		E9318AA216F93DF100D5DA88 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMockito.framework; sourceTree = "<group>"; };
+		E9318AA816F93E2A00D5DA88 /* TestFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFraction.m; sourceTree = "<group>"; };
+		E9318AAC16F93E3400D5DA88 /* TestMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMutableFraction.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9318A6716F9342300D5DA88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318A6E16F9342300D5DA88 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9318A8616F9342300D5DA88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318A8C16F9342300D5DA88 /* SenTestingKit.framework in Frameworks */,
+				E9318A8D16F9342300D5DA88 /* Cocoa.framework in Frameworks */,
+				E9318AA316F93DF100D5DA88 /* OCHamcrest.framework in Frameworks */,
+				E9318AA416F93DF200D5DA88 /* OCMockito.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9318A6116F9342300D5DA88 = {
+			isa = PBXGroup;
+			children = (
+				E9318AB116F93EB200D5DA88 /* Fraction Code */,
+				E9318A7316F9342300D5DA88 /* Fraction Development */,
+				E9318A9016F9342300D5DA88 /* Fraction DevelopmentTests */,
+				E9318A6C16F9342300D5DA88 /* Frameworks */,
+				E9318A6B16F9342300D5DA88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9318A6B16F9342300D5DA88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9318A6A16F9342300D5DA88 /* Fraction Development.app */,
+				E9318A8A16F9342300D5DA88 /* Fraction DevelopmentTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9318A6C16F9342300D5DA88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9318AA116F93DF100D5DA88 /* OCHamcrest.framework */,
+				E9318AA216F93DF100D5DA88 /* OCMockito.framework */,
+				E9318A6D16F9342300D5DA88 /* Cocoa.framework */,
+				E9318A8B16F9342300D5DA88 /* SenTestingKit.framework */,
+				E9318A6F16F9342300D5DA88 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9318A6F16F9342300D5DA88 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9318A7016F9342300D5DA88 /* AppKit.framework */,
+				E9318A7116F9342300D5DA88 /* CoreData.framework */,
+				E9318A7216F9342300D5DA88 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E9318A7316F9342300D5DA88 /* Fraction Development */ = {
+			isa = PBXGroup;
+			children = (
+				E9318AB016F93E6E00D5DA88 /* GUI */,
+				E9318A7416F9342300D5DA88 /* Supporting Files */,
+			);
+			path = "Fraction Development";
+			sourceTree = "<group>";
+		};
+		E9318A7416F9342300D5DA88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9318A7516F9342300D5DA88 /* Fraction Development-Info.plist */,
+				E9318A7616F9342300D5DA88 /* InfoPlist.strings */,
+				E9318A7916F9342300D5DA88 /* main.m */,
+				E9318A7B16F9342300D5DA88 /* Fraction Development-Prefix.pch */,
+				E9318A7C16F9342300D5DA88 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9318A9016F9342300D5DA88 /* Fraction DevelopmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9318AAC16F93E3400D5DA88 /* TestMutableFraction.m */,
+				E9318AA816F93E2A00D5DA88 /* TestFraction.m */,
+				E9318A9116F9342300D5DA88 /* Supporting Files */,
+			);
+			path = "Fraction DevelopmentTests";
+			sourceTree = "<group>";
+		};
+		E9318A9116F9342300D5DA88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9318A9216F9342300D5DA88 /* Fraction DevelopmentTests-Info.plist */,
+				E9318A9316F9342300D5DA88 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9318AB016F93E6E00D5DA88 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				E9318A7F16F9342300D5DA88 /* WCSAppDelegate.h */,
+				E9318A8016F9342300D5DA88 /* WCSAppDelegate.m */,
+				E9318A8216F9342300D5DA88 /* MainMenu.xib */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		E9318AB116F93EB200D5DA88 /* Fraction Code */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Fraction Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9318A6916F9342300D5DA88 /* Fraction Development */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9318A9B16F9342300D5DA88 /* Build configuration list for PBXNativeTarget "Fraction Development" */;
+			buildPhases = (
+				E9318A6616F9342300D5DA88 /* Sources */,
+				E9318A6716F9342300D5DA88 /* Frameworks */,
+				E9318A6816F9342300D5DA88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fraction Development";
+			productName = "Fraction Development";
+			productReference = E9318A6A16F9342300D5DA88 /* Fraction Development.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9318A8916F9342300D5DA88 /* Fraction DevelopmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9318A9E16F9342300D5DA88 /* Build configuration list for PBXNativeTarget "Fraction DevelopmentTests" */;
+			buildPhases = (
+				E9318A8516F9342300D5DA88 /* Sources */,
+				E9318A8616F9342300D5DA88 /* Frameworks */,
+				E9318A8716F9342300D5DA88 /* Resources */,
+				E9318AA516F93DF800D5DA88 /* CopyFiles */,
+				E9318A8816F9342300D5DA88 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9318A8F16F9342300D5DA88 /* PBXTargetDependency */,
+			);
+			name = "Fraction DevelopmentTests";
+			productName = "Fraction DevelopmentTests";
+			productReference = E9318A8A16F9342300D5DA88 /* Fraction DevelopmentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9318A6216F9342300D5DA88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WCS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Wells CS132: Object Oriented Programming";
+			};
+			buildConfigurationList = E9318A6516F9342300D5DA88 /* Build configuration list for PBXProject "Fraction Development" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E9318A6116F9342300D5DA88;
+			productRefGroup = E9318A6B16F9342300D5DA88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9318A6916F9342300D5DA88 /* Fraction Development */,
+				E9318A8916F9342300D5DA88 /* Fraction DevelopmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9318A6816F9342300D5DA88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318A7816F9342300D5DA88 /* InfoPlist.strings in Resources */,
+				E9318A7E16F9342300D5DA88 /* Credits.rtf in Resources */,
+				E9318A8416F9342300D5DA88 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9318A8716F9342300D5DA88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318A9516F9342300D5DA88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9318A8816F9342300D5DA88 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9318A6616F9342300D5DA88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318A7A16F9342300D5DA88 /* main.m in Sources */,
+				E9318A8116F9342300D5DA88 /* WCSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9318A8516F9342300D5DA88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9318AAA16F93E2A00D5DA88 /* TestFraction.m in Sources */,
+				E9318AAE16F93E3400D5DA88 /* TestMutableFraction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9318A8F16F9342300D5DA88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9318A6916F9342300D5DA88 /* Fraction Development */;
+			targetProxy = E9318A8E16F9342300D5DA88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9318A7616F9342300D5DA88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9318A7716F9342300D5DA88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E9318A7C16F9342300D5DA88 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9318A7D16F9342300D5DA88 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E9318A8216F9342300D5DA88 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9318A8316F9342300D5DA88 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E9318A9316F9342300D5DA88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9318A9416F9342300D5DA88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9318A9916F9342300D5DA88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E9318A9A16F9342300D5DA88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E9318A9C16F9342300D5DA88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction Development/Fraction Development-Prefix.pch";
+				INFOPLIST_FILE = "Fraction Development/Fraction Development-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E9318A9D16F9342300D5DA88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction Development/Fraction Development-Prefix.pch";
+				INFOPLIST_FILE = "Fraction Development/Fraction Development-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E9318A9F16F9342300D5DA88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Development.app/Contents/MacOS/Fraction Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction Development/Fraction Development-Prefix.pch";
+				INFOPLIST_FILE = "Fraction DevelopmentTests/Fraction DevelopmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E9318AA016F9342300D5DA88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Development.app/Contents/MacOS/Fraction Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction Development/Fraction Development-Prefix.pch";
+				INFOPLIST_FILE = "Fraction DevelopmentTests/Fraction DevelopmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9318A6516F9342300D5DA88 /* Build configuration list for PBXProject "Fraction Development" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9318A9916F9342300D5DA88 /* Debug */,
+				E9318A9A16F9342300D5DA88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9318A9B16F9342300D5DA88 /* Build configuration list for PBXNativeTarget "Fraction Development" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9318A9C16F9342300D5DA88 /* Debug */,
+				E9318A9D16F9342300D5DA88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9318A9E16F9342300D5DA88 /* Build configuration list for PBXNativeTarget "Fraction DevelopmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9318A9F16F9342300D5DA88 /* Debug */,
+				E9318AA016F9342300D5DA88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9318A6216F9342300D5DA88 /* Project object */;
+}
