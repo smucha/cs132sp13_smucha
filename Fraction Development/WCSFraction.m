@@ -27,7 +27,6 @@
 }
 
 
-
 - (WCSFraction*)negative
 {
     WCSFraction* theAnswer = nil;
