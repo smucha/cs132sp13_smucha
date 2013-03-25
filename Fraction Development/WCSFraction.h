@@ -17,31 +17,31 @@
 - (void)initWithNumerator:(int)
            andDenominator:(int) d ;
 
-- (void)initWithFraction:(Fraction*) f ;
+- (void)initWithFraction:(WCSFraction*) f ;
 
 - (float)floatValue;
 
-- (Fraction*)negative;
+- (WCSFraction*)negative;
 
-- (Fraction*)reciprocal;
+- (WCSFraction*)reciprocal;
 
-- (Fraction*)sumWith:(Fraction*) sum;
+- (WCSFraction*)sumWith:(WCSFraction*) sum;
 
-- (Fraction*)subtractFrom:(Fraction*) subtract;
+- (WCSFraction*)subtractFrom:(WCSFraction*) subtract;
 
-- (Fraction*)minus:(Fraction*) m;
+- (WCSFraction*)minus:(WCSFraction*) m;
 
-- (Fraction*)multiplyBy:(Fraction*) multiply;
+- (WCSFraction*)multiplyBy:(WCSFraction*) multiply;
 
-- (Fraction*)divideBy:(Fraction*) divide;
+- (WCSFraction*)divideBy:(WCSFraction*) divide;
 
-- (Fraction*)divideInto:(Fraction*) into;
+- (WCSFraction*)divideInto:(WCSFraction*) into;
 
-- (Fraction*)reduced:(Fraction*) commonDenominator;
+- (WCSFraction*)reduced:(WCSFraction*) commonDenominator;
 
-- (Fraction*)add:(Fraction*) thingToAdd;
+- (WCSFraction*)add:(WCSFraction*) RHS;
 
-- (Fraction*)multiply:(Fraction*) thingtoMultiply;
+- (WCSFraction*)multiply:(WCSFraction*) thingtoMultiply;
 
 -(NSComparisonResult) compareToFraction:(WCSFraction*) otherFraction;
 

@@ -10,8 +10,6 @@
 
 @implementation WCSFraction
 
-@implementation ImmutableFraction
-
 @synthesize numerator;
 
 @synthesize denominator;
@@ -28,98 +26,100 @@
     return 0;
 }
 
-- (Fraction*)negative
+
+
+- (WCSFraction*)negative
 {
-    Fraction* theAnswer = nil;
+    WCSFraction* theAnswer = nil;
 	int a = [self numerator]; //this is "a"
 	int b = [self denominator]; //this is "b"
 	int newNumerator = -a; //or whatever formula
 	int newDenominator = b; //or whatever formula
-	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                      andDenominator:newDenominator];
     return theAnswer;
 }
 
-- (Fraction*)reciprocal
+- (WCSFraction*)reciprocal
 {
-    Fraction* theAnswer = nil;
+   WCSFraction* theAnswer = nil;
 	int a = [self numerator]; //this is "a"
 	int b = [self denominator]; //this is "b"
 	int newNumerator = b; //or whatever formula
 	int newDenominator = a; //or whatever formula
-	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
-                                     andDenominator:newDenominator];
+	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
+                                        andDenominator:newDenominator];
     return theAnswer;
 }
 
-- (Fraction*)sumWith:(Fraction*) sum
+- (WCSFraction*)sumWith:(WCSFraction*) sum
 {
     printf("sum with method ran");
     return nil;
 }
 
-- (Fraction*)subtractFrom:(Fraction*) subtract
+- (WCSFraction*)subtractFrom:(WCSFraction*) subtract
 {
     return [self minus:[subtract negative]];
 }
 
-- (Fraction*)minus:(Fraction*) thingToSubtract
+- (WCSFraction*)minus:(WCSFraction*) thingToSubtract
 {
     return [self add:[thingToSubtract negative]];
 }
 
-- (Fraction*)multiplyBy:(Fraction*) multiply
+- (WCSFraction*)multiplyBy:(WCSFraction*) multiply
 {
     printf("multiply by method ran");
     return nil;
 }
 
-- (Fraction*)divideBy:(Fraction*) divisor
+- (WCSFraction*)divideBy:(WCSFraction*) divisor
 {
     return [self multiply:[divisor reciprocal]];
 }
 
-- (Fraction*)divideInto:(Fraction*) thingOnTop
+- (WCSFraction*)divideInto:(WCSFraction*) thingOnTop
 {
     return [thingOnTop multiply:[self reciprocal]];
 }
 
-- (Fraction*)reduced:(Fraction*) commonDenominator
+- (WCSFraction*)reduced:(WCSFraction*) commonDenominator
 {
     int x = [self numerator];
 	int y = [self denominator];
-	int d = GCD(x,y)
-	int newNumerator = x/d
-	int newDenominator = y/d
-	Fraction* theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+	int d = gcd(x,y);
+	int newNumerator = x/d;
+	int newDenominator = y/d;
+	WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                                andDenominator:newDenominator];
 	return theAnswer;
 }
 
-(Fraction*)add:(Fraction*) thingToAdd
+- (WCSFraction*)add:(WCSFraction*) thingToAdd
 {
-    Fraction* theAnswer = nil;
+    WCSFraction* theAnswer = nil;
 	int a = [self numerator]; //this is "a"
 	int b = [self denominator]; //this is "b
-	int c = [RHS numerator]; //this is "c"
-	int d = [RHS denominator]; //this is "d'
+	int c = [thingToAdd numerator]; //this is "c"
+	int d = [thingToAdd denominator]; //this is "d'
 	int newNumerator = a*d+b*c; //or whatever formula
 	int newDenominator = d*b; //or whatever formula
-	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                      andDenominator:newDenominator];
 	return theAnswer;
 }
 
-- (Fraction*)multiply:(Fraction*) thingtoMultiply
+- (WCSFraction*)multiply:(WCSFraction*) thingtoMultiply
 {
-    Fraction* theAnswer = nil;
+    WCSFraction* theAnswer = nil;
 	int a = [self numerator]; //this is "a"
 	int b = [self denominator]; //this is "b
-	int c = [RHS numerator]; //this is "c"
-	int d = [RHS denominator]; //this is "d'
+	int c = [thingtoMultiply numerator]; //this is "c"
+	int d = [thingtoMultiply denominator]; //this is "d'
 	int newNumerator = a*c; //or whatever formula
 	int newDenominator = d*b; //or whatever formula
-	theAnswer = [[Fraction alloc] initWithNumerator:newNumerator
+	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
                                      andDenominator:newDenominator];
 	return theAnswer;
 }
