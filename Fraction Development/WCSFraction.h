@@ -14,10 +14,10 @@
 
 @property (readonly,assign) int denominator;
 
-- (void)initWithNumerator:(int) RHS
-           andDenominator:(int) LHS ;
+- (id)initWithNumerator:(int) RHS
+         andDenominator:(int) LHS ;
 
-- (void)initWithFraction:(WCSFraction*) f ;
+- (id)initWithFraction:(WCSFraction*) fraction;
 
 - (float)floatValue;
 
@@ -25,21 +25,21 @@
 
 - (WCSFraction*)reciprocal;
 
-- (WCSFraction*)sumWith:(WCSFraction*) sum;
+- (WCSFraction*)sumWith:(WCSFraction*) ThingToSumWith;
 
-- (WCSFraction*)subtractFrom:(WCSFraction*) subtract;
+- (WCSFraction*)subtractFrom:(WCSFraction*) thingToSubtractFrom;
 
-- (WCSFraction*)minus:(WCSFraction*) m;
+- (WCSFraction*)minus:(WCSFraction*) thingToMinus;
 
-- (WCSFraction*)multiplyBy:(WCSFraction*) multiply;
+- (WCSFraction*)multiplyBy:(WCSFraction*) thingToMultiply;
 
-- (WCSFraction*)divideBy:(WCSFraction*) divide;
+- (WCSFraction*)divideBy:(WCSFraction*) divisor;
 
-- (WCSFraction*)divideInto:(WCSFraction*) into;
+- (WCSFraction*)divideInto:(WCSFraction*) thingOnTop;
 
 - (WCSFraction*)reduced:(WCSFraction*) commonDenominator;
 
-- (WCSFraction*)add:(WCSFraction*) RHS;
+- (WCSFraction*)add:(WCSFraction*) thingToAdd;
 
 - (WCSFraction*)multiply:(WCSFraction*) thingtoMultiply;
 

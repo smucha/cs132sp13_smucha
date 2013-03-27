@@ -14,6 +14,8 @@
 
 @synthesize denominator;
 
+
+
 - (id)init
 {
     printf("init method ran");
@@ -26,6 +28,24 @@
     return 0;
 }
 
+- (id)initWithNumerator:(int) RHS
+         andDenominator:(int) LHS
+{
+    printf("initWithNumerator and initWithDenominator ran");
+    return nil;
+}
+
+- (id)initWithFraction:(WCSFraction*) fraction
+{
+    printf("initWithFraction ran");
+    return nil;
+}
+
+- (float)floatValue
+{
+    printf("floatValue ran");
+    return 0;
+}
 
 - (WCSFraction*)negative
 {
@@ -35,7 +55,7 @@
 	int newNumerator = -a; //or whatever formula
 	int newDenominator = b; //or whatever formula
 	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
-                                     andDenominator:newDenominator];
+                                        andDenominator:newDenominator];
     return theAnswer;
 }
 
@@ -51,23 +71,23 @@
     return theAnswer;
 }
 
-- (WCSFraction*)sumWith:(WCSFraction*) sum
+- (WCSFraction*)sumWith:(WCSFraction*) ThingToSumWith
 {
     printf("sum with method ran");
     return nil;
 }
 
-- (WCSFraction*)subtractFrom:(WCSFraction*) subtract
+- (WCSFraction*)subtractFrom:(WCSFraction*) thingToSubtractFrom
 {
-    return [self minus:[subtract negative]];
+    return [self minus:[thingToSubtractFrom negative]];
 }
 
-- (WCSFraction*)minus:(WCSFraction*) thingToSubtract
+- (WCSFraction*)minus:(WCSFraction*) thingToMinus
 {
-    return [self add:[thingToSubtract negative]];
+    return [self add:[thingToMinus negative]];
 }
 
-- (WCSFraction*)multiplyBy:(WCSFraction*) multiply
+- (WCSFraction*)multiplyBy:(WCSFraction*) thingToMultiply
 {
     printf("multiply by method ran");
     return nil;
@@ -91,7 +111,7 @@
 	int newNumerator = x/d;
 	int newDenominator = y/d;
 	WCSFraction* theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
-                                               andDenominator:newDenominator];
+           andDenominator:newDenominator];
 	return theAnswer;
 }
 
@@ -105,7 +125,7 @@
 	int newNumerator = a*d+b*c; //or whatever formula
 	int newDenominator = d*b; //or whatever formula
 	theAnswer = [[WCSFraction alloc] initWithNumerator:newNumerator
-                                     andDenominator:newDenominator];
+                                        andDenominator:newDenominator];
 	return theAnswer;
 }
 
