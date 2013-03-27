@@ -19,7 +19,10 @@
 -(void)setNumerator:(int) top
      andDenominator:(int) bottom
 {
-
+    int GCD = gcd(top, bottom);
+    [self setNumerator:top/GCD];
+    [self setDenominator:bottom/GCD];
+    
 }
 
 -(void)modifyByAdding:(int) additive
