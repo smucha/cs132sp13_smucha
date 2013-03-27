@@ -10,9 +10,9 @@
 
 @implementation WCSFraction
 
-@synthesize numerator;
+@synthesize numerator = _DNU_numerator;
 
-@synthesize denominator;
+@synthesize denominator = _DNU_denominator;
 
 
 
