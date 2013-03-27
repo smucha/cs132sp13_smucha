@@ -18,8 +18,7 @@
 
 - (id)init
 {
-    printf("init method ran");
-    return 0;
+    return [self initWithNumerator:1 andDenominator:1];
 }
 
 - (id)description
@@ -31,8 +30,11 @@
 - (id)initWithNumerator:(int) RHS
          andDenominator:(int) LHS
 {
-    printf("initWithNumerator and initWithDenominator ran");
-    return nil;
+    self = [super init];
+    if(self) {
+        printf("intialzing!");
+    }
+    return self;
 }
 
 - (id)initWithFraction:(WCSFraction*) fraction
