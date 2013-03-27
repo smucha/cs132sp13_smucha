@@ -33,15 +33,18 @@
 
 -(void)modifyByMultiplying:(WCSFraction*) multiple
 {
-
+    WCSFraction* theAnswer = [self multiply:multiple];
+    [self setNumerator:[theAnswer numerator] andDenominator:[theAnswer denominator]];
 }
 -(void)modifyByInverting
 {
-
+    WCSFraction* theAnswer = [self reciprocal];
+    [self setNumerator:[theAnswer numerator] andDenominator:[theAnswer denominator]];
 }
 -(void)modifyByNegating
 {
-
+    WCSFraction* theAnswer = [self negative];
+    [self setNumerator:[theAnswer numerator] andDenominator:[theAnswer denominator]];
 }
 
 @end
