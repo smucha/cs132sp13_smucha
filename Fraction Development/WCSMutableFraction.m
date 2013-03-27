@@ -25,12 +25,13 @@
     
 }
 
--(void)modifyByAdding:(int) additive
+-(void)modifyByAdding:(WCSFraction*) additive
 {
-    
+    WCSFraction* theAnswer = [self add:additive];
+    [self setNumerator:[theAnswer numerator] andDenominator:[theAnswer denominator]];
 }
 
--(void)modifyByMultiplying:(int) multiple
+-(void)modifyByMultiplying:(WCSFraction*) multiple
 {
 
 }

@@ -17,9 +17,9 @@
 -(void)setNumerator:(int) top
      andDenominator:(int) bottom;
 
--(void)modifyByAdding:(int) additive;
+-(void)modifyByAdding:(WCSFraction*) additive;
 
--(void)modifyByMultiplying:(int) multiple;
+-(void)modifyByMultiplying:(WCSFraction*) multiple;
 
 -(void)modifyByInverting;
 
