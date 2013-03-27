@@ -8,12 +8,14 @@
 
 #import "WCSMutableFraction.h"
 
+#import "WCSFraction.h"
+
 @implementation WCSMutableFraction
 
 @synthesize numerator = _AOII_numerator;
 
 @synthesize denominator = _AOII_denominator;
-
+
 -(void)setNumerator:(int) top
      andDenominator:(int) bottom
 {
@@ -22,7 +24,7 @@
 
 -(void)modifyByAdding:(int) additive
 {
-
+    
 }
 
 -(void)modifyByMultiplying:(int) multiple
