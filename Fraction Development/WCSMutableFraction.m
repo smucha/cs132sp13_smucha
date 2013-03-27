@@ -10,4 +10,8 @@
 
 @implementation WCSMutableFraction
 
+@synthesize numerator = _DNU_numerator;
+
+@synthesize denominator = _DNU_denominator;
+
 @end
