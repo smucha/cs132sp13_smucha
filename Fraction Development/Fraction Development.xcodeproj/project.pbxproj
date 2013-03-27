@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B283A12016FCA4D30034AF43 /* WCSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B283A11F16FCA4D30034AF43 /* WCSFraction.m */; };
+		B2C7DA251703B10900C355BA /* WCSMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7DA241703B10900C355BA /* WCSMutableFraction.m */; };
 		E9318A6E16F9342300D5DA88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318A6D16F9342300D5DA88 /* Cocoa.framework */; };
 		E9318A7816F9342300D5DA88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9318A7616F9342300D5DA88 /* InfoPlist.strings */; };
 		E9318A7A16F9342300D5DA88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9318A7916F9342300D5DA88 /* main.m */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		B283A11E16FCA4D30034AF43 /* WCSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSFraction.h; sourceTree = "<group>"; };
 		B283A11F16FCA4D30034AF43 /* WCSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSFraction.m; sourceTree = "<group>"; };
+		B2C7DA231703B10900C355BA /* WCSMutableFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSMutableFraction.h; sourceTree = "<group>"; };
+		B2C7DA241703B10900C355BA /* WCSMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSMutableFraction.m; sourceTree = "<group>"; };
 		E9318A6A16F9342300D5DA88 /* Fraction Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fraction Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9318A6D16F9342300D5DA88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E9318A7016F9342300D5DA88 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -195,6 +198,8 @@
 			children = (
 				B283A11E16FCA4D30034AF43 /* WCSFraction.h */,
 				B283A11F16FCA4D30034AF43 /* WCSFraction.m */,
+				B2C7DA231703B10900C355BA /* WCSMutableFraction.h */,
+				B2C7DA241703B10900C355BA /* WCSMutableFraction.m */,
 			);
 			name = "Fraction Code";
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				E9318A7A16F9342300D5DA88 /* main.m in Sources */,
 				E9318A8116F9342300D5DA88 /* WCSAppDelegate.m in Sources */,
 				B283A12016FCA4D30034AF43 /* WCSFraction.m in Sources */,
+				B2C7DA251703B10900C355BA /* WCSMutableFraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
