@@ -10,8 +10,32 @@
 
 @implementation WCSMutableFraction
 
-@synthesize numerator = _DNU_numerator;
+@synthesize numerator = _AOII_numerator;
 
-@synthesize denominator = _DNU_denominator;
+@synthesize denominator = _AOII_denominator;
+
+-(void)setNumerator:(int) top
+     andDenominator:(int) bottom
+{
+
+}
+
+-(void)modifyByAdding:(int) additive
+{
+
+}
+
+-(void)modifyByMultiplying:(int) multiple
+{
+
+}
+-(void)modifyByInverting
+{
+
+}
+-(void)modifyByNegating
+{
+
+}
 
 @end
