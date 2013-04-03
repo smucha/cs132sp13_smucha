@@ -37,16 +37,15 @@
     return self;
 }
 
-- (id)initWithFraction:(WCSFraction*) fraction
+- (id)initWithFraction:(WCSFraction*) theFraction
 {
-    printf("initWithFraction ran");
-    return nil;
+    return [self initWithNumerator:1
+                    andDenominator:1];
 }
 
--(id)initWithInteger:(int) integer
+-(id)initWithInteger:(int) theInteger
 {
-    //stub
-    return nil;
+    return [self initWithNumerator:theInteger andDenominator:1];
 }
 
 - (float)floatValue

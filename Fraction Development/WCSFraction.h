@@ -17,9 +17,9 @@
 - (id)initWithNumerator:(int) RHS
          andDenominator:(int) LHS ;
 
-- (id)initWithFraction:(WCSFraction*) fraction;
+- (id)initWithFraction:(WCSFraction*) theFraction;
 
--(id)initWithInteger:(int) integer;
+-(id)initWithInteger:(int) theInteger;
 
 - (float)floatValue;
 
