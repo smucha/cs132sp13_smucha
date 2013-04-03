@@ -19,6 +19,8 @@
 
 - (id)initWithFraction:(WCSFraction*) fraction;
 
+-(id)initWithInteger:(int) integer;
+
 - (float)floatValue;
 
 - (WCSFraction*)negative;

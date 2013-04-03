@@ -43,6 +43,12 @@
     return nil;
 }
 
+-(id)initWithInteger:(int) integer
+{
+    //stub
+    return nil;
+}
+
 - (float)floatValue
 {
     printf("floatValue ran");
