@@ -53,8 +53,6 @@
 /* Begin PBXFileReference section */
 		B283A11E16FCA4D30034AF43 /* WCSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSFraction.h; sourceTree = "<group>"; };
 		B283A11F16FCA4D30034AF43 /* WCSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSFraction.m; sourceTree = "<group>"; };
-		B2A6F07D170E15B9000E87D0 /* NSMutableCopying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMutableCopying.h; sourceTree = "<group>"; };
-		B2A6F07E170E1634000E87D0 /* NSCopying.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCopying.h; sourceTree = "<group>"; };
 		B2C7DA231703B10900C355BA /* WCSMutableFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSMutableFraction.h; sourceTree = "<group>"; };
 		B2C7DA241703B10900C355BA /* WCSMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSMutableFraction.m; sourceTree = "<group>"; };
 		E9318A6A16F9342300D5DA88 /* Fraction Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fraction Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,10 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				B283A11E16FCA4D30034AF43 /* WCSFraction.h */,
-				B2A6F07E170E1634000E87D0 /* NSCopying.h */,
 				B283A11F16FCA4D30034AF43 /* WCSFraction.m */,
 				B2C7DA231703B10900C355BA /* WCSMutableFraction.h */,
-				B2A6F07D170E15B9000E87D0 /* NSMutableCopying.h */,
 				B2C7DA241703B10900C355BA /* WCSMutableFraction.m */,
 			);
 			name = "Fraction Code";

@@ -7,7 +7,6 @@
 //
 
 #import "WCSFraction.h"
-#import "NSMutableCopying.h"
 
 @interface WCSMutableFraction : WCSFraction
 
