@@ -23,6 +23,7 @@
 
 - (id)description
 {
+    NSLog(@"The fraction is: %d/%d",[self numerator], [self denominator]);
     return [self initWithNumerator:1 andDenominator:1];
 }
 

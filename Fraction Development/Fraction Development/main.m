@@ -31,6 +31,14 @@ int main(int argc, char *argv[])
         NSLog(@"DANGIT!");
     }
     
+    WCSMutableFraction* theMutant;
+    WCSMutableFraction* oneEigth;
+    WCSMutableFraction* two;
+    
+    theMutant = [theMutant initWithNumerator:5 andDenominator:8];
+    oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
+    two = [two initWithNumerator:4 andDenominator:2];
+    
     
     return NSApplicationMain(argc, (const char **)argv);
 }

@@ -187,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				E9318A7F16F9342300D5DA88 /* WCSAppDelegate.h */,
-				E9318A8016F9342300D5DA88 /* WCSAppDelegate.m */,
 				E9318A8216F9342300D5DA88 /* MainMenu.xib */,
+				E9318A8016F9342300D5DA88 /* WCSAppDelegate.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
