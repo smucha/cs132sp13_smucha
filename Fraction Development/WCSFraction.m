@@ -23,8 +23,7 @@
 
 - (id)description
 {
-    printf("description method ran");
-    return 0;
+    return [self initWithNumerator:1 andDenominator:1];
 }
 
 - (id)initWithNumerator:(int) RHS
@@ -122,7 +121,7 @@
 	return theAnswer;
 }
 
-- (WCSFraction*)add:(WCSFraction*) thingToAdd
+- (WCSFraction*)add:(WCSFraction *)thingToAdd
 {
     WCSFraction* theAnswer = nil;
 	int a = [self numerator]; //this is "a"
