@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSCopying.h"
 
 @interface WCSFraction : NSObject
 
