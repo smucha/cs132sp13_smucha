@@ -38,7 +38,17 @@ int main(int argc, char *argv[])
     theMutant = [theMutant initWithNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
     two = [two initWithNumerator:4 andDenominator:2];
+    theAnswer = [theMutant minus:oneEigth];
+    theResult = [theAnswer add:two];
     
+    if (theResult = theAnswer)
+    {
+        NSLog(@"YES");
+    }
+    else
+    {
+        NSLog(@"OH NOES!");
+    }
     
     return NSApplicationMain(argc, (const char **)argv);
 }
