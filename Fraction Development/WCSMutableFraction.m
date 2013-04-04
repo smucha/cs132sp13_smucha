@@ -16,6 +16,12 @@
 
 @synthesize denominator = _AOII_denominator;
 
+-(id)mutableCopyWithZone:(NSZone *)zone
+{
+    //stub
+    return 0;
+}
+
 -(void)setNumerator:(int) top
      andDenominator:(int) bottom
 {

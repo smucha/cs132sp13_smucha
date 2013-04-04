@@ -15,6 +15,11 @@
 @synthesize denominator = _DNU_denominator;
 
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    //stub
+    return 0;
+}
 
 - (id)init
 {
