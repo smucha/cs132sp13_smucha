@@ -8,7 +8,7 @@
 
 #import "WCSFraction.h"
 
-@interface WCSMutableFraction : WCSFraction
+@interface WCSMutableFraction : WCSFraction <NSMutableCopying>
 
 @property (readwrite,assign) int numerator;
 
