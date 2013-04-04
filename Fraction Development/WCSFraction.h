@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WCSFraction : NSObject
+@interface WCSFraction : NSObject <NSCopying>
 
 @property (readonly,assign) int numerator;
 
