@@ -12,13 +12,14 @@
 
 @implementation WCSMutableFraction
 
-@synthesize numerator = _AOII_numerator;
+@synthesize numerator = _DNUOutsideInit_numerator;
 
-@synthesize denominator = _AOII_denominator;
+@synthesize denominator = _DNUOutsideInit_denominator;
 
 -(id)mutableCopyWithZone:(NSZone *)zone
 {
-    //stub
+    WCSFraction* anotherFraction = nil;
+    anotherFraction = [[WCSFraction allocWithZone:zone] initWithFraction:self];
     return 0;
 }
 

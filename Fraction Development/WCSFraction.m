@@ -17,7 +17,8 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    //stub
+    WCSFraction* someFraction = nil;
+    someFraction = [[WCSFraction allocWithZone:zone] initWithFraction:self];
     return 0;
 }
 
@@ -37,7 +38,10 @@
 {
     self = [super init];
     if(self) {
-        printf("intialzing!");
+        _DNU_numerator = RHS;
+        _DNU_denominator = LHS;
+        [self setNumerator: RHS];
+        [self setDenominator: LHS];
     }
     return self;
 }
