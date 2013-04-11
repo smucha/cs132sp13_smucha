@@ -10,9 +10,9 @@
 
 @implementation WCSFraction
 
-@synthesize numerator = _DNU_numerator;
+@synthesize numerator = DNUOutsideInit_numerator;
 
-@synthesize denominator = _DNU_denominator;
+@synthesize denominator = DNUOutsideInit_denominator;
 
 
 - (id)copyWithZone:(NSZone *)zone
@@ -38,8 +38,8 @@
 {
     self = [super init];
     if(self) {
-        _DNU_numerator = RHS;
-        _DNU_denominator = LHS;
+        DNUOutsideInit_numerator = RHS;
+        DNUOutsideInit_denominator = LHS;
         [self setNumerator: RHS];
         [self setDenominator: LHS];
     }
