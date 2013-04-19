@@ -107,7 +107,7 @@
 - (void)testOnePlusOneEqualsTwo
 {
     // given
-    result = [frac_one addTo:frac_one];
+    result = [frac_one add:frac_one];
     // then
     assertThat(result, is(equalTo(frac_two)));
 }
@@ -115,11 +115,11 @@
 - (void)testOnePlusZeroEqualsOne
 {
     // given
-    result = [frac_one addTo:frac_zero];
+    result = [frac_one add:frac_zero];
     // then
     assertThat(result, is(equalTo(frac_one)));
 }
-
+
 - (void)testOneTimesZeroEqualsZero
 {
     // given
