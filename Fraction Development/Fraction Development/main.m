@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     WCSMutableFraction* theMutant;
     WCSMutableFraction* oneEigth;
     WCSMutableFraction* two;
+    WCSFraction* theResult;
     
     theMutant = [theMutant initWithNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
     theAnswer = [theMutant minus:oneEigth];
     theResult = [theAnswer add:two];
     
-    if (theResult = theAnswer)
+    if (theResult == theAnswer)
     {
         NSLog(@"YES");
     }
