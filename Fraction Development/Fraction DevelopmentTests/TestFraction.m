@@ -119,7 +119,7 @@
     // then
     assertThat(result, is(equalTo(frac_one)));
 }
-
+
 - (void)testOneTimesZeroEqualsZero
 {
     // given
