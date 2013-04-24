@@ -29,16 +29,47 @@
 
 - (id)description
 {
-    NSLog(@"The fraction is: %d/%d",[self numerator], [self denominator]);
-    return [self initWithNumerator:1 andDenominator:1];
+    if([self denominator] == 1)
+    {
+        return [NSString stringWithFormat: @"%d" , [self numerator]];
+    }
+    else
+    
+        if([self denominator] == 0)
+        {
+            return [NSString stringWithFormat: @"ERROR" ];
+        }
+        else
+        {
+            return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominator]];
+        }
+    
 }
 
 - (id)initWithNumerator:(int) RHS
          andDenominator:(int) LHS
 {
+    int a = RHS;
+    int b = LHS;
+    int newRHS = a / gcd(a , b);
+    int newLHS = b / gcd(a , b);
+    
+    if (newLHS<0)
+    {
+        newLHS = newLHS*-1;
+        newRHS = newRHS*-1;
+    }
+    
+    
+    
     self = [super init];
+    if (self) {
+        DNUOutsideInit_numerator = newRHS;
+        DNUOutsideInit_denominator = newLHS;
+    }
     return self;
 }
+
 
 - (id)initWithFraction:(WCSFraction*) theFraction
 {
