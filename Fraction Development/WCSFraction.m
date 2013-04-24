@@ -37,12 +37,6 @@
          andDenominator:(int) LHS
 {
     self = [super init];
-    if(self) {
-        DNUOutsideInit_numerator = RHS;
-        DNUOutsideInit_denominator = LHS;
-        [self setNumerator: RHS];
-        [self setDenominator: LHS];
-    }
     return self;
 }
 
