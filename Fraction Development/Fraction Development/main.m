@@ -22,14 +22,7 @@ int main(int argc, char *argv[])
     theAnswer = [oneThird minus:oneHalf];
     ans = [ans initWithNumerator:-1 andDenominator:6];
     
-    if ((ans = theAnswer))
-    {
-        NSLog(@"YAY!");
-    }
-    else
-    {
-        NSLog(@"DANGIT!");
-    }
+    NSLog(@"%@ minus %@ equals %@", oneThird, oneHalf, theAnswer);
     
     WCSMutableFraction* theMutant;
     WCSMutableFraction* oneEigth;
@@ -39,17 +32,10 @@ int main(int argc, char *argv[])
     theMutant = [theMutant initWithNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
     two = [two initWithNumerator:4 andDenominator:2];
-    theAnswer = [theMutant minus:oneEigth];
-    theResult = [theAnswer add:two];
+    [theMutant modifyByAdding:[oneEigth negative]];
+    [theMutant modifyByAdding:two];
     
-    if (theResult == theAnswer)
-    {
-        NSLog(@"YES");
-    }
-    else
-    {
-        NSLog(@"OH NOES!");
-    }
+    NSLog(@"5/8 minus %@ plus %@ equals %@", oneEigth, two, theResult);
     
     return NSApplicationMain(argc, (const char **)argv);
 }

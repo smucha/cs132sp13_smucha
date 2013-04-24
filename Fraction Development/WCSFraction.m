@@ -34,7 +34,7 @@
         return [NSString stringWithFormat: @"%d" , [self numerator]];
     }
     else
-    
+    
         if([self denominator] == 0)
         {
             return [NSString stringWithFormat: @"ERROR" ];
@@ -73,8 +73,8 @@
 
 - (id)initWithFraction:(WCSFraction*) theFraction
 {
-    return [self initWithNumerator:1
-                    andDenominator:1];
+    return [self initWithNumerator:[theFraction numerator]
+                    andDenominator:[theFraction denominator]];
 }
 
 -(id)initWithInteger:(int) theInteger
@@ -114,13 +114,12 @@
 
 - (WCSFraction*)sumWith:(WCSFraction*) ThingToSumWith
 {
-    printf("sum with method ran");
-    return nil;
+    return [ThingToSumWith add:self];
 }
 
 - (WCSFraction*)subtractFrom:(WCSFraction*) thingToSubtractFrom
 {
-    return [self minus:[thingToSubtractFrom negative]];
+    return [thingToSubtractFrom minus:self];
 }
 
 - (WCSFraction*)minus:(WCSFraction*) thingToMinus
@@ -130,8 +129,7 @@
 
 - (WCSFraction*)multiplyBy:(WCSFraction*) thingToMultiply
 {
-    printf("multiply by method ran");
-    return nil;
+    return [thingToMultiply multiply:self];
 }
 
 - (WCSFraction*)divideBy:(WCSFraction*) divisor
