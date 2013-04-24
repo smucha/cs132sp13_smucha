@@ -41,9 +41,8 @@
         }
         else
         {
-            return [NSString stringWithFormat: @"%d/%d" , [self numerator] , [self denominator]];
+            return [NSString stringWithFormat:@"%d/%d", [self numerator], [self denominator]];
         }
-    
 }
 
 - (id)initWithNumerator:(int) RHS
