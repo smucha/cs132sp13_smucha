@@ -1,10 +1,12 @@
 #import <Foundation/Foundation.h>
+#import "WCSFraction.h"
+#import "WCSMutableFraction.h"
 
 @interface Calculator : NSObject
 
-@property (assign) int numberOnScreen;
+@property (strong)  WCSMutableFraction* numberOnScreen;
 
-@property (assign) int numberAccumulated;
+@property (strong) WCSMutableFraction* numberAccumulated;
 
 @property (assign) char operationPending;
 
