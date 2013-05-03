@@ -12,10 +12,10 @@
 
 int main(int argc, char *argv[])
 {
-    WCSFraction* oneThird;
-    WCSFraction* oneHalf;
-    WCSFraction* theAnswer;
-    WCSFraction* ans;
+    WCSFraction* oneThird = [WCSFraction alloc];
+    WCSFraction* oneHalf = [WCSFraction alloc];
+    WCSFraction* theAnswer = [WCSFraction alloc];
+    WCSFraction* ans = [WCSFraction alloc];
     
     oneThird = [oneThird initWithNumerator:1 andDenominator:3];
     oneHalf = [oneHalf initWithNumerator:1 andDenominator:2];
@@ -27,10 +27,10 @@ int main(int argc, char *argv[])
     
     
     
-    WCSMutableFraction* theMutant;
-    WCSMutableFraction* oneEigth;
-    WCSMutableFraction* two;
-    WCSMutableFraction* theResult;
+    WCSMutableFraction* theMutant = [WCSMutableFraction alloc];
+    WCSMutableFraction* oneEigth = [WCSMutableFraction alloc];
+    WCSMutableFraction* two = [WCSMutableFraction alloc];
+    WCSMutableFraction* theResult = [WCSMutableFraction alloc];
     
     theMutant = [theMutant initWithNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
