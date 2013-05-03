@@ -29,16 +29,17 @@ int main(int argc, char *argv[])
     
     WCSMutableFraction* theMutant = [WCSMutableFraction alloc];
     WCSFraction* oneEigth = [WCSFraction alloc];
-    WCSMutableFraction* two = [WCSMutableFraction alloc];
-    WCSMutableFraction* theResult = [WCSMutableFraction alloc];
+    WCSFraction* two = [WCSFraction alloc];
+    WCSFraction* theResult = [WCSFraction alloc];
     
     [theMutant setNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
-    [two setNumerator:4 andDenominator:2];
+    two = [two initWithNumerator:4 andDenominator:2];
     [theMutant modifyByAdding:[oneEigth negative]];
-    [theMutant modifyByAdding:two];
+    [theMutant modifyByMultiplying:two];
+    theResult = [theResult initWithNumerator:2 andDenominator:1];
     
-    NSLog(@"5/8 - %@ + %@ = %@", oneEigth, two, theResult);
+    NSLog(@"5/8 - %@ * %@ = %@", oneEigth, two, theResult);
     
     return NSApplicationMain(argc, (const char **)argv);
 }
