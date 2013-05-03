@@ -12,9 +12,9 @@
 
 @implementation WCSMutableFraction
 
-@synthesize numerator = _DNUOutsideInit_numerator;
+@synthesize numerator = DNUOutsideInit_numerator;
 
-@synthesize denominator = _DNUOutsideInit_denominator;
+@synthesize denominator = DNUOutsideInit_denominator;
 
 -(id)mutableCopyWithZone:(NSZone *)zone
 {
@@ -29,7 +29,6 @@
     int GCD = gcd(top, bottom);
     [self setNumerator:top/GCD];
     [self setDenominator:bottom/GCD];
-    
 }
 
 -(void)modifyByAdding:(WCSFraction*) additive

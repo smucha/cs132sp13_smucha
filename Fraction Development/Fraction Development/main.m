@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
     
     
     WCSMutableFraction* theMutant = [WCSMutableFraction alloc];
-    WCSMutableFraction* oneEigth = [WCSMutableFraction alloc];
+    WCSFraction* oneEigth = [WCSFraction alloc];
     WCSMutableFraction* two = [WCSMutableFraction alloc];
     WCSMutableFraction* theResult = [WCSMutableFraction alloc];
     
-    theMutant = [theMutant initWithNumerator:5 andDenominator:8];
+    [theMutant setNumerator:5 andDenominator:8];
     oneEigth = [oneEigth initWithNumerator:1 andDenominator:8];
-    two = [two initWithNumerator:4 andDenominator:2];
+    [two setNumerator:4 andDenominator:2];
     [theMutant modifyByAdding:[oneEigth negative]];
     [theMutant modifyByAdding:two];
     
