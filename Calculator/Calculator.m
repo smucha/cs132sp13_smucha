@@ -1,4 +1,6 @@
 #import "Calculator.h"
+#import "WCSFraction.h"
+#import "WCSMutableFraction.h"
 
 @implementation Calculator
 
@@ -52,7 +54,7 @@
 
 -(NSString*) description
 {
-    return [NSString stringWithFormat:@"Calculator with %d on screen.", [self numberOnScreen]];
+    return [NSString stringWithFormat:@"Calculator with %@ on screen.", [self numberOnScreen]];
 }
 
 -(void)appendDigit:(char) theKey
@@ -76,7 +78,7 @@
 
 -(void)clearScreen:(char) theKey
 {
-    [self setNumberOnScreen : 0 ];
+    [self setNumberOnScreen:0];
 }
 
 -(void) registerArithmetic:(char)theOperator
@@ -89,45 +91,53 @@
 
 -(void) computeAndDisplayResult
 {
-    char operator;
-	int lhs;
-	int rhs;
-	int result = 0;
-	rhs = [self numberOnScreen];
-	lhs = [self numberAccumulated];
-	operator = [self operationPending];
+    char operator = [self operationPending];
+	WCSMutableFraction* result = [self numberOnScreen];
+    WCSFraction* accumlated = [self numberAccumulated];
     switch(operator)
 	{
 		case '+':
-		    result = lhs+rhs;
+		    [result modifyByAdding:accumlated];
 		    break;
 		case '-':
-            result = lhs-rhs;
+            [result modifyByAdding:[accumlated negative]];
             break;
 		case '*':
-            result = lhs*rhs;
+            [result modifyByMultiplying:accumlated];
             break;
         case '/':
-            result = lhs/rhs;
+            [result modifyByMultiplying:[accumlated reciprocal]];
             break;
         case '%':
-            result = lhs%rhs;
+            switch ([self fractional]) {
+                case WCSPartTop:
+                    [self setFractional:WCSPartBottom];
+                    break;
+                case WCSPartBottom :
+                    [self setFractional:WCSPartTop];
+                default:
+                    NSLog(@"NOPES");
+                    break;
+                
+            }
             break;
 		default:
-            result = rhs;
             break;
 	}
 	[self setNumberOnScreen:result];
-    [self clearAccumulator:0];
-    [self clearOperation:0];
+    [self clearAccumulator];
+    [self clearOperation];
+    
 }
+    
 
--(void) clearAccumulator:(char) theKey
+
+-(void) clearAccumulator
 {
     numberAccumulated = 0;
 }
 
--(void) clearOperation:(char) theKey
+-(void) clearOperation
 {
     operationPending = '?';
 }
