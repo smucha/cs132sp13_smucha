@@ -57,11 +57,21 @@
 
 -(void)appendDigit:(char) theKey
 {
-    int old;
-    old = [self numberOnScreen];
-    int newDigit;
-    newDigit = theKey - '0';
-    [self setNumberOnScreen: 10 * old + newDigit];
+    WCSMutableFraction* old =[self numberOnScreen] ;
+    switch ([self fractional])
+    {
+        case WCSPartTop:
+            [old setNumerator:[old numerator]*10+theKey];
+            break;
+            
+        case WCSPartBottom:
+            [old setNumerator:[old denominator]*10+theKey];
+            break;
+            
+        default:
+            NSLog(@"ERROR!");
+            break;
+    }
 }
 
 -(void)clearScreen:(char) theKey
