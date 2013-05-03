@@ -16,7 +16,7 @@
 
 -(void)updateDisplay
 {
-    [[self displayArea] setStringValue:[NSString stringWithFormat:@"%d", [_casio numberOnScreen]]];
+    [[self displayArea] setStringValue:[NSString stringWithFormat:@"%@", [_casio numberOnScreen]]];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
