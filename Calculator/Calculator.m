@@ -109,27 +109,44 @@
             [result modifyByMultiplying:[accumlated reciprocal]];
             break;
         case '%':
-            switch ([self fractional]) {
-                case WCSPartTop:
-                    [self setFractional:WCSPartBottom];
-                    break;
-                case WCSPartBottom :
-                    [self setFractional:WCSPartTop];
-                default:
-                    NSLog(@"NOPES");
-                    break;
-                
+            if([self fractional]== WCSPartTop)
+            {
+                [self setFractional: WCSPartBottom];
             }
+            else
+                if([self fractional]== WCSPartBottom)
+                {
+                    [self setFractional: WCSPartTop];
+                }
+                else
+                {
+                    NSLog(@"ERROR!");
+                }
             break;
-		default:
-            break;
-	}
-	[self setNumberOnScreen:result];
+        case '<':
+            result = [self numberOnScreen];
+            if([self fractional]== WCSPartTop)
+            {
+                [result setNumerator:[result numerator]/10];
+            }
+            else
+                if([self fractional]== WCSPartBottom)
+                {
+                    [result setDenominator:[result denominator]/10];
+                }
+                else
+                {
+                                NSLog(@"ERROR!");
+                }
+        default:
+        break;
+        }
+    [self setNumberOnScreen:result];
     [self clearAccumulator];
     [self clearOperation];
     
 }
-    
+
 
 
 -(void) clearAccumulator
