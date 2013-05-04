@@ -76,7 +76,6 @@
     return self;
 }
 
-
 - (id)initWithFraction:(WCSFraction*) theFraction
 {
     return [self initWithNumerator:[theFraction numerator]
