@@ -10,9 +10,9 @@
 
 @implementation WCSFraction
 
-@synthesize numerator = DNUOutsideInit_numerator;
+@synthesize numerator = _DNUOutsideInit_numerator;
 
-@synthesize denominator = DNUOutsideInit_denominator;
+@synthesize denominator = _DNUOutsideInit_denominator;
 
 
 - (id)copyWithZone:(NSZone *)zone
@@ -24,7 +24,13 @@
 
 - (id)init
 {
-    return [self initWithNumerator:1 andDenominator:1];
+    {
+        self = [self initWithNumerator:1
+                        andDenominator:1 ] ;
+        
+        return self ;
+        
+    }
 }
 
 - (id)description
@@ -45,26 +51,27 @@
         }
 }
 
-- (id)initWithNumerator:(int) RHS
-         andDenominator:(int) LHS
+-(id) initWithNumerator:(int) theNumerator
+         andDenominator:(int) theDenominator
 {
-    int a = RHS;
-    int b = LHS;
-    int newRHS = a / gcd(a , b);
-    int newLHS = b / gcd(a , b);
     
-    if (newLHS<0)
+    int a = theNumerator;
+    int b = theDenominator;
+    int newNumerator = a / gcd( a , b ) ;
+    int newDenominator = b / gcd( a , b ) ;
+    
+    if (newDenominator<0)
     {
-        newLHS = newLHS*-1;
-        newRHS = newRHS*-1;
+        newDenominator = newDenominator*-1;
+        newNumerator = newNumerator*-1;
     }
     
     
     
     self = [super init];
     if (self) {
-        DNUOutsideInit_numerator = newRHS;
-        DNUOutsideInit_denominator = newLHS;
+        _DNUOutsideInit_numerator = newNumerator;
+         _DNUOutsideInit_denominator = newDenominator;
     }
     return self;
 }

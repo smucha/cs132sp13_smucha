@@ -21,7 +21,7 @@ typedef enum {
 
 -(void)appendDigit:(char) theKey;
 
--(void)clearScreen:(char) theKey;
+-(void)clearScreen;
 
 -(void) registerArithmetic:(char)theOperator;
 

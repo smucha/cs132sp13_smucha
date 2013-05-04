@@ -19,6 +19,7 @@
         [self setNumberAccumulated:0];
         [self setNumberOnScreen:0];
         [self setOperationPending:'?'];
+        [self setFractional:WCSPartTop];
     }
     return self;
 }
@@ -32,8 +33,14 @@
     } else {
         if(isClearScreenKey(theKey))
         {
-            [self clearScreen:theKey];
+            [self clearScreen];
         } else {
+            if(isClearAllKey(theKey))
+            {
+                [self clearAccumulator];
+                [self clearOperation];
+                [self clearScreen];
+            }
             NSLog(@"Uncovered argument '%c' in %@ message received by object at %p (%@)", theKey, NSStringFromSelector(_cmd), self, self);
         }
     
@@ -49,7 +56,7 @@
     if(isClearAllKey(theKey))
     {
         [self computeAndDisplayResult];
-        [self clearScreen:theKey];
+        [self clearScreen];
     }
 }
 
@@ -68,7 +75,7 @@
             break;
             
         case WCSPartBottom:
-            [old setNumerator:[old denominator]*10+theKey];
+            [old setDenominator:[old denominator]*10+theKey];
             break;
             
         default:
@@ -77,16 +84,17 @@
     }
 }
 
--(void)clearScreen:(char) theKey
+-(void)clearScreen
 {
-    [self setNumberOnScreen:0];
+    WCSMutableFraction* clear = [[WCSMutableFraction alloc] initWithNumerator:0 andDenominator:1];
+    [self setNumberOnScreen: clear ];
 }
 
 -(void) registerArithmetic:(char)theOperator
 {
     [self computeAndDisplayResult];
     [self setNumberAccumulated:[self numberOnScreen]];
-    [self clearScreen:0];
+    [self clearScreen];
     [self setOperationPending:theOperator];
 }
 
@@ -152,7 +160,8 @@
 
 -(void) clearAccumulator
 {
-    numberAccumulated = 0;
+    WCSFraction* clear = [[WCSFraction alloc] initWithNumerator:0 andDenominator:1];
+    numberAccumulated = clear;
 }
 
 -(void) clearOperation
@@ -196,5 +205,6 @@ BOOL isArithmeticAllKey(char pressKey)
     if(pressKey == '*') return YES;
     if(pressKey == '/') return YES;
     if(pressKey == '%') return YES;
+    if(pressKey == '<') return YES;
     return NO;
 }
