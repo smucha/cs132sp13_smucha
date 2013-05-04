@@ -1,13 +1,44 @@
-//
-//  Fraction Calculator.h
-//  Fraction Calculator
-//
-//  Created by Stacey Mucha on 5/4/13.
-//  Copyright (c) 2013 Stacey Mucha. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
+#import "WCSFraction.h"
+#import "WCSMutableFraction.h"
+
+typedef enum {
+	WCSPartTop,
+	WCSPartBottom
+} WCSFractionPart;
 
 @interface Fraction_Calculator : NSObject
 
+@property (strong, readwrite)  WCSMutableFraction* numberOnScreen;
+
+@property (strong, readwrite) WCSFraction* numberAccumulated;
+
+@property (assign) char operationPending;
+
+@property (assign) WCSFractionPart fractional;
+
+-(void) pressKey:(char) theKey;
+
+-(void)appendDigit:(char) theKey;
+
+-(void)clearScreen;
+
+-(void) registerArithmetic:(char)theOperator;
+
+-(void) computeAndDisplayResult;
+
+-(void) clearAccumulator;
+
+-(void) clearOperation;
+
 @end
+
+BOOL isAdigit(char pressKey);
+
+BOOL isClearScreenKey(char pressKey);
+
+BOOL isClearAllKey(char pressKey);
+
+BOOL isResultKey(char pressKey);
+
+BOOL isArithmeticAllKey(char pressKey);

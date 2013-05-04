@@ -17,6 +17,11 @@
 		B2826AC71735838C000BFDF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AA71735838B000BFDF2 /* Cocoa.framework */; };
 		B2826ACF1735838C000BFDF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2826ACD1735838C000BFDF2 /* InfoPlist.strings */; };
 		B2826AD21735838C000BFDF2 /* Fraction_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826AD11735838C000BFDF2 /* Fraction_CalculatorTests.m */; };
+		B2826ADD173583EE000BFDF2 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826ADC173583EE000BFDF2 /* Fraction Calculator.m */; };
+		B2826AE21735847D000BFDF2 /* WCSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826ADF1735847C000BFDF2 /* WCSFraction.m */; };
+		B2826AE31735847D000BFDF2 /* WCSMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826AE11735847D000BFDF2 /* WCSMutableFraction.m */; };
+		B2826AE6173584A4000BFDF2 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */; };
+		B2826AE7173584A4000BFDF2 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AE5173584A4000BFDF2 /* OCMockito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,14 @@
 		B2826ACE1735838C000BFDF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B2826AD01735838C000BFDF2 /* Fraction_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction_CalculatorTests.h; sourceTree = "<group>"; };
 		B2826AD11735838C000BFDF2 /* Fraction_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction_CalculatorTests.m; sourceTree = "<group>"; };
+		B2826ADB173583EE000BFDF2 /* Fraction Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction Calculator.h"; sourceTree = "<group>"; };
+		B2826ADC173583EE000BFDF2 /* Fraction Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction Calculator.m"; sourceTree = "<group>"; };
+		B2826ADE1735847C000BFDF2 /* WCSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSFraction.h; sourceTree = "<group>"; };
+		B2826ADF1735847C000BFDF2 /* WCSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSFraction.m; sourceTree = "<group>"; };
+		B2826AE01735847C000BFDF2 /* WCSMutableFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSMutableFraction.h; sourceTree = "<group>"; };
+		B2826AE11735847D000BFDF2 /* WCSMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSMutableFraction.m; sourceTree = "<group>"; };
+		B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "Fraction CalculatorTests/OCHamcrest.framework"; sourceTree = "<group>"; };
+		B2826AE5173584A4000BFDF2 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = "Fraction CalculatorTests/OCMockito.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +79,8 @@
 			files = (
 				B2826AC61735838C000BFDF2 /* SenTestingKit.framework in Frameworks */,
 				B2826AC71735838C000BFDF2 /* Cocoa.framework in Frameworks */,
+				B2826AE6173584A4000BFDF2 /* OCHamcrest.framework in Frameworks */,
+				B2826AE7173584A4000BFDF2 /* OCMockito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,12 @@
 		B2826A9B1735838B000BFDF2 = {
 			isa = PBXGroup;
 			children = (
+				B2826ADB173583EE000BFDF2 /* Fraction Calculator.h */,
+				B2826ADC173583EE000BFDF2 /* Fraction Calculator.m */,
+				B2826ADE1735847C000BFDF2 /* WCSFraction.h */,
+				B2826ADF1735847C000BFDF2 /* WCSFraction.m */,
+				B2826AE01735847C000BFDF2 /* WCSMutableFraction.h */,
+				B2826AE11735847D000BFDF2 /* WCSMutableFraction.m */,
 				B2826AAD1735838B000BFDF2 /* Fraction Calculator */,
 				B2826ACA1735838C000BFDF2 /* Fraction CalculatorTests */,
 				B2826AA61735838B000BFDF2 /* Frameworks */,
@@ -94,6 +115,8 @@
 		B2826AA61735838B000BFDF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */,
+				B2826AE5173584A4000BFDF2 /* OCMockito.framework */,
 				B2826AA71735838B000BFDF2 /* Cocoa.framework */,
 				B2826AC51735838C000BFDF2 /* SenTestingKit.framework */,
 				B2826AA91735838B000BFDF2 /* Other Frameworks */,
@@ -264,6 +287,9 @@
 			files = (
 				B2826AB41735838B000BFDF2 /* main.m in Sources */,
 				B2826ABB1735838B000BFDF2 /* WCSAppDelegate.m in Sources */,
+				B2826ADD173583EE000BFDF2 /* Fraction Calculator.m in Sources */,
+				B2826AE21735847D000BFDF2 /* WCSFraction.m in Sources */,
+				B2826AE31735847D000BFDF2 /* WCSMutableFraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +435,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Calculator.app/Contents/MacOS/Fraction Calculator";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Fraction CalculatorTests\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fraction Calculator/Fraction Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Fraction CalculatorTests/Fraction CalculatorTests-Info.plist";
@@ -424,7 +453,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fraction Calculator.app/Contents/MacOS/Fraction Calculator";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/Fraction CalculatorTests\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fraction Calculator/Fraction Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Fraction CalculatorTests/Fraction CalculatorTests-Info.plist";
