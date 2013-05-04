@@ -16,12 +16,14 @@
 		B2826AC61735838C000BFDF2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AC51735838C000BFDF2 /* SenTestingKit.framework */; };
 		B2826AC71735838C000BFDF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AA71735838B000BFDF2 /* Cocoa.framework */; };
 		B2826ACF1735838C000BFDF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2826ACD1735838C000BFDF2 /* InfoPlist.strings */; };
-		B2826AD21735838C000BFDF2 /* Fraction_CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826AD11735838C000BFDF2 /* Fraction_CalculatorTests.m */; };
 		B2826ADD173583EE000BFDF2 /* Fraction Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826ADC173583EE000BFDF2 /* Fraction Calculator.m */; };
 		B2826AE21735847D000BFDF2 /* WCSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826ADF1735847C000BFDF2 /* WCSFraction.m */; };
 		B2826AE31735847D000BFDF2 /* WCSMutableFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826AE11735847D000BFDF2 /* WCSMutableFraction.m */; };
 		B2826AE6173584A4000BFDF2 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */; };
 		B2826AE7173584A4000BFDF2 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2826AE5173584A4000BFDF2 /* OCMockito.framework */; };
+		B2826AEB173588D5000BFDF2 /* Fraction Calculator Test.m in Sources */ = {isa = PBXBuildFile; fileRef = B2826AEA173588D5000BFDF2 /* Fraction Calculator Test.m */; };
+		B2826AED17358AA4000BFDF2 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */; };
+		B2826AEE17358AA4000BFDF2 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2826AE5173584A4000BFDF2 /* OCMockito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 			remoteInfo = "Fraction Calculator";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2826AEC17358A98000BFDF2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				B2826AED17358AA4000BFDF2 /* OCHamcrest.framework in CopyFiles */,
+				B2826AEE17358AA4000BFDF2 /* OCMockito.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B2826AA41735838B000BFDF2 /* Fraction Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fraction Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,8 +68,6 @@
 		B2826AC51735838C000BFDF2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B2826ACC1735838C000BFDF2 /* Fraction CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fraction CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		B2826ACE1735838C000BFDF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B2826AD01735838C000BFDF2 /* Fraction_CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction_CalculatorTests.h; sourceTree = "<group>"; };
-		B2826AD11735838C000BFDF2 /* Fraction_CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction_CalculatorTests.m; sourceTree = "<group>"; };
 		B2826ADB173583EE000BFDF2 /* Fraction Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction Calculator.h"; sourceTree = "<group>"; };
 		B2826ADC173583EE000BFDF2 /* Fraction Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction Calculator.m"; sourceTree = "<group>"; };
 		B2826ADE1735847C000BFDF2 /* WCSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCSFraction.h; sourceTree = "<group>"; };
@@ -62,6 +76,7 @@
 		B2826AE11735847D000BFDF2 /* WCSMutableFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCSMutableFraction.m; sourceTree = "<group>"; };
 		B2826AE4173584A4000BFDF2 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = "Fraction CalculatorTests/OCHamcrest.framework"; sourceTree = "<group>"; };
 		B2826AE5173584A4000BFDF2 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = "Fraction CalculatorTests/OCMockito.framework"; sourceTree = "<group>"; };
+		B2826AEA173588D5000BFDF2 /* Fraction Calculator Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction Calculator Test.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +175,7 @@
 		B2826ACA1735838C000BFDF2 /* Fraction CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2826AD01735838C000BFDF2 /* Fraction_CalculatorTests.h */,
-				B2826AD11735838C000BFDF2 /* Fraction_CalculatorTests.m */,
+				B2826AEA173588D5000BFDF2 /* Fraction Calculator Test.m */,
 				B2826ACB1735838C000BFDF2 /* Supporting Files */,
 			);
 			path = "Fraction CalculatorTests";
@@ -203,6 +217,7 @@
 				B2826ABF1735838C000BFDF2 /* Sources */,
 				B2826AC01735838C000BFDF2 /* Frameworks */,
 				B2826AC11735838C000BFDF2 /* Resources */,
+				B2826AEC17358A98000BFDF2 /* CopyFiles */,
 				B2826AC21735838C000BFDF2 /* ShellScript */,
 			);
 			buildRules = (
@@ -297,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2826AD21735838C000BFDF2 /* Fraction_CalculatorTests.m in Sources */,
+				B2826AEB173588D5000BFDF2 /* Fraction Calculator Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +500,7 @@
 				B2826AD71735838C000BFDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2826AD81735838C000BFDF2 /* Build configuration list for PBXNativeTarget "Fraction CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +509,7 @@
 				B2826ADA1735838C000BFDF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
